@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-function App() {
+import LandingPage from "./Components/LandingPage";
+import LoginWithNavigation from "./Components/LoginWithNavigation";
+import RegisterWithNavigation from "./Components/ RegisterWithNavigation";
+import ProfileWithNavigation from "./Components/ProfileWithNavigation";
+
+import ProtectedRoute from "./Components/ProtectedRoute";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginWithNavigation />} />
+        <Route path="/register" element={<RegisterWithNavigation />} />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <ProfileWithNavigation />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

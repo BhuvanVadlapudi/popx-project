@@ -1,0 +1,119 @@
+/* Page container */
+.sign-in-page {
+    min-height: 100vh;
+    padding: 24px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Title */
+.sign-in-page h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f2933;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.sign-in-page p {
+    font-size: 15px;
+    color: #7b8794;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+/* Form */
+.sign-in-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.sign-in-page label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6c2bd9;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+.sign-in-page input {
+    height: 20px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 18px;
+}
+
+/* Input focus */
+.sign-in-page input:focus {
+    border-color: #6c2bd9;
+}
+
+/* Error message */
+.error-msg {
+    color: #dc2626;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+/* Login button (disabled look like image) */
+.sign-in-page button {
+    width: 100%;
+    height: 48px;
+    background-color: #6c2bd9;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* -------------------- */
+/* Desktop view tweaks  */
+/* -------------------- */
+@media screen and (min-width: 768px) {
+  .sign-in-page {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sign-in-page h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .sign-in-page p {
+    text-align: center;
+    max-width: 420px;
+  }
+
+  .sign-in-page form {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 24px;
+  }
+
+  .sign-in-page input {
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+  }
+
+  .sign-in-page button {
+    width: 100%;
+    height: 52px;
+    font-size: 17px;
+    margin-top: 8px;
+  }
+}
